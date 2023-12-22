@@ -1,0 +1,13 @@
+.footer {
+  height: 4rem;
+  margin-top: auto;
+  background-color: var(--color-dark--1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: var(--color-light--1);
+}

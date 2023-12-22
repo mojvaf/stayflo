@@ -17,9 +17,6 @@ const HomePage = () => {
           The app tracks your footsteps into every city you have been and never
           forget your wonderful experiences.
         </h2>
-        <Link href="/login" className="cta">
-          Start tracking now
-        </Link>
       </section>
     </main>
   );
