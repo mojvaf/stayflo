@@ -1,4 +1,4 @@
-.login {
+.register {
   margin: 2.5rem;
   padding: 2.5rem 5rem;
   background-color: var(--color-dark--1);
@@ -21,4 +21,12 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.error {
+  background-color: red;
+  width: max-content;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--color-light--2);
 }

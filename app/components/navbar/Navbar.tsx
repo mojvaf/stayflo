@@ -4,6 +4,7 @@ import Logo from "./icon.png";
 //next
 import Link from "next/link";
 import Image from "next/image";
+
 const Navbar = () => {
   return (
     <div className={styles.nav}>
