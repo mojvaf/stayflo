@@ -2,7 +2,7 @@ This app uses NextJs, react, Typescript and supabase.
 
 ## Getting Started
 
-The program start with
+The program starts with
 
 ```bash
 npm run dev
