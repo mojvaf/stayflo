@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./homepage.module.css";
 //components
-
+// TODO: this page looks like is redundant
 //next
 import Link from "next/link";
 const HomePage = () => {

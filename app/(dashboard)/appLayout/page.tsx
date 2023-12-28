@@ -4,7 +4,7 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import LogoutButton from "@/app/components/logoutButton/LogoutButton";
 import { redirect } from "next/navigation";
-
+// TODO: Please change the route name to "dashboard"
 const AppLayout = async () => {
   const supabase = createServerComponentClient({ cookies });
   const { data } = await supabase.auth.getSession();

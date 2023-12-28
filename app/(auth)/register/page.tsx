@@ -19,6 +19,7 @@ const Register: React.FC = () => {
     email: string,
     password: string
   ): Promise<void> => {
+    // TODO: show a "loading" message to user while the function is running
     e.preventDefault();
     const supabase = createClientComponentClient();
     const { error } = await supabase.auth.signUp({
@@ -65,6 +66,7 @@ const Register: React.FC = () => {
         </div>
 
         <div>
+          {/*TODO: Please replace the button with spinner while the submission is processing*/}
           <Button type="submit" className="primary">
             Submit
           </Button>
