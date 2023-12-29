@@ -14,11 +14,16 @@ const Login: React.FC = () => {
 
   const router = useRouter();
 
+  // TODO: Please create a custom hook that checks if the user is already logged in
+  // For that use supabase.auth.onAuthStateChange() function
+  // If the user is already logged then forward the user to homepage
+
   const handelSubmit = async (
     e: React.FormEvent<HTMLFormElement>,
     email: string,
     password: string
   ): Promise<void> => {
+    // TODO: Please show a loading spinner while the request is processing
     e.preventDefault();
     setError("");
     const subabase = createClientComponentClient();
@@ -32,6 +37,7 @@ const Login: React.FC = () => {
     }
 
     if (!error) {
+      // TODO: replace this route with something that makes sense, like "home" or "dashboard"
       router.push("/appLayout");
     }
   };
