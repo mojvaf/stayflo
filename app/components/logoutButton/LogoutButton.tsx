@@ -20,7 +20,7 @@ export default function LogoutButton() {
   };
 
   return (
-    <Button onClick={handelLogout} className="btn" type="submit">
+    <Button onClick={handelLogout} className="btn" type="submit" >
       Logout
     </Button>
   );
