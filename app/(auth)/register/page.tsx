@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./register.module.css";
 //component
 import Button from "../../components/button/Button";
@@ -13,6 +13,7 @@ const Register: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handelSubmit = async (
     e: React.FormEvent<HTMLFormElement>,
@@ -22,6 +23,7 @@ const Register: React.FC = () => {
     // TODO: show a "loading" message to user while the function is running
     e.preventDefault();
     const supabase = createClientComponentClient();
+    setLoading(true);
     const { error } = await supabase.auth.signUp({
       email,
       password,
@@ -29,7 +31,7 @@ const Register: React.FC = () => {
         emailRedirectTo: `${location.origin}/api/auth/callback`,
       },
     });
-
+    setLoading(false);
     if (error) {
       setError(error.message);
     }
@@ -67,7 +69,7 @@ const Register: React.FC = () => {
 
         <div>
           {/*TODO: Please replace the button with spinner while the submission is processing*/}
-          <Button type="submit" className="primary">
+          <Button type="primary" loading={loading}>
             Submit
           </Button>
         </div>
